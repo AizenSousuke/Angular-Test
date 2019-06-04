@@ -1,9 +1,15 @@
-<a [routerLink]="'/'"><h1>{{title}}</h1></a>
+<body>
 
-<nav>
-    <a routerLink="/dashboard">Dashboard</a>
-    <br>
-    <a routerLink="/heroes">Heroes</a>
-</nav>
-<router-outlet></router-outlet>
-<app-messages></app-messages>
+    <mat-sidenav-container class="example-container">
+        <mat-sidenav mode="side" opened>
+            <button mat-raised-button routerLink="/dashboard">Dashboard</button>
+            <button mat-raised-button routerLink="/heroes">Heroes</button>
+        </mat-sidenav>
+        <mat-sidenav-content>
+            <h1>{{ title }}</h1>
+            <router-outlet></router-outlet>
+            <app-messages></app-messages>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+
+</body>
